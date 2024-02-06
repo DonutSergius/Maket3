@@ -30,11 +30,20 @@
 
 @media(max-width: 989px){
     .container-menu{
-        font-size: 16px;
+        font-size: 18px;
         letter-spacing: 0px;
     }
 
-    .menu {
+    .menu{
+        width: 80%;
+    }
+}
+
+@media(max-width: 560px){
+    .container-menu{
+        font-size: 16px;
+    }
+    .menu{
         width: 415px;
     }
 }
@@ -130,7 +139,7 @@
         position: fixed;
         visibility: hidden;
         top: 0px;
-        left: 0%;
+        left: -415px;
       
         width: 415px;
         height: 100%;
