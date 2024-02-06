@@ -1,0 +1,95 @@
+.container{
+    padding: 10px;
+    width: 980px;
+    margin: 45px auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'PT Sans', sans-serif;
+    align-items:end;
+    color: #767676;
+}
+
+.left-container{
+    display: flex;
+    width: 350px;
+    height: 100px;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.company{
+    padding: 10px;
+    line-height: 30px;
+    
+}
+
+.right-container{
+    text-align: right;
+}
+
+.phone{
+    margin: 0px;
+    padding: 0px;
+    width: 413px;
+    height: 86px;
+    font-size: 40px;
+    letter-spacing: 0px;
+    line-height: 42px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.back p{
+    text-decoration: dashed underline;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-weight: 700;
+    font-family: 'PT Sans', sans-serif;
+}
+
+@media(max-width: 990px){
+    .container{
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .left-container{
+        width: 200px;
+        height: 50px;
+    }
+
+    .logo img{
+        width:50px;
+        height: 50px;
+    }
+
+    .company{
+        padding-top: 0px;
+        line-height: 18px;
+    }
+
+    .company-top h1{
+        font-size: 18px;
+    }
+
+    .company-down{
+        font-size: 10px;
+    }
+
+    .phone {
+        width: auto;
+        height: auto;
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+
+    .back p{
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
