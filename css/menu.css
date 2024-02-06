@@ -47,16 +47,6 @@
         width: 415px;
     }
 }
-/*
-@media(max-width: 415px){
-    .container-menu{
-        font-size: 12px;
-    }
-
-    .menu {
-        width: max-content;
-    }
-}*/
 
 .hamburger-menu{display: none;}
 

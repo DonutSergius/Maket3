@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="css/null.css" >
     <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="css/menu.css" >
+    <link rel="stylesheet" href="css/slider.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap" rel="stylesheet">     <title>NameCompany</title>
 </head>
 <body>
+<!-- ================ HEADER ================== -->
     <header>
         <div class="container">
             <div class="left-container">
@@ -39,20 +41,9 @@
             </div>
         </div>
     </header>
-    <!--
-    <div class="container-menu">
-        <div class="menu">
-            <a href="">Home</a>
-            <div>|</div> 
-            <a href="">Catalog</a>
-            <div>|</div> 
-            <a href="">Delivery and payment</a>
-            <div>|</div> 
-            <a href="">Price List</a>
-            <div>|</div> 
-            <a href="">Contacts</a>
-        </div>
-    </div> -->
+<!-- ======================================== -->
+
+<!-- ================ MENU ================== -->
     <div class="container-menu">
         <div class="menu">
             <a href="#">Home</a>
@@ -83,5 +74,75 @@
             </ul>
         </div>
     </div>
+<!-- ========================================== -->
+
+<!-- ================ SLIDER ================== -->
+<div class="container-slider">
+    <img src="img/slide1.jpg" alt="slide1" class="slider-image">
+    
+    <div class="slider-menu">
+        <div class="preview-img">
+            <button id="prevBtn">
+                <img src="img/left.jpg" alt="left">
+            </button>
+        </div>
+        <div class="next-img">
+            <button id="nextBtn">
+                <img src="img/right.jpg" alt="right">
+            </button>
+        </div>
+    </div>
+</div>
+<!-- ========================================== -->
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const sliderImage = document.querySelector('.slider-image');
+
+    const images = ['img/slide1.jpg', 'img/slide2.jpg'];
+    let currentImageIndex = 0;
+    let timer;
+
+    function showImage(index, direction) {
+        sliderImage.style.animation = 'fadeIn 0.5s forwards';
+        sliderImage.src = images[index];
+    }
+
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex, 'next');
+        restartTimer();
+    }
+
+    function autoChangeImage() {
+        timer = setTimeout(function () {
+            showNextImage();
+        }, 4000);
+    }
+
+    function restartTimer() {
+        clearTimeout(timer);
+        autoChangeImage();
+    }
+
+    prevBtn.addEventListener('click', function () {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex, 'prev');
+        restartTimer();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        showNextImage();
+        restartTimer();
+    });
+
+    sliderImage.addEventListener('animationend', function () {
+        sliderImage.style.animation = '';
+    });
+
+    autoChangeImage();
+});
+</script>
 </html>
