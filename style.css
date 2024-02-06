@@ -51,7 +51,7 @@
     font-family: 'PT Sans', sans-serif;
 }
 
-@media(max-width: 990px){
+@media(max-width: 989px){
     .container{
         width: max-content;
         margin: 0 auto;
@@ -91,5 +91,48 @@
     .back p{
         font-size: 18px;
         line-height: 20px;
+    }
+}
+
+@media(max-width:415px) {
+    .container{
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .left-container{
+        width: 150px;
+        height: 50px;
+    }
+
+    .logo img{
+        width:50px;
+        height: 50px;
+    }
+
+    .company{
+        padding-top: 0px;
+        line-height: 16px;
+    }
+
+    .company-top h1{
+        font-size: 14px;
+    }
+
+    .company-down{
+        font-size: 8px;
+    }
+
+    .phone {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        line-height: 18x;
+        letter-spacing: -1px;
+    }
+
+    .back p{
+        font-size: 12px;
+        line-height: 16px;
     }
 }
