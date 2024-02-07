@@ -1,6 +1,6 @@
 .url-text{
     margin: 0 auto;
-    width: 980px;
+    width: 990px;
     padding: 10px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
@@ -10,7 +10,7 @@
 
 .container-content{
     margin: 0 auto;
-    width: 980px;
+    width: 990px;
     padding: 10px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
@@ -50,4 +50,49 @@ li b{
     line-height: 25px;
     letter-spacing: 1px;
     text-align: center;
+}
+
+.right-content{
+    width: 795px;
+}
+
+.card-content{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-box{
+    box-sizing: border-box;
+    position: relative;
+    width: 250px;
+    height: 380px;
+    background-color: #dcdcdc;
+    padding: 20px 20px 20px 20px;
+    margin: 0px 0px 10px 8px;
+}
+
+.card-box img{
+    width: 210px;
+    height: 210px;
+}
+
+.card-box p{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.card-price {
+    position: absolute;
+    bottom: 20px;
+    font-size: 28px;
+    line-height: 18px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-price img{
+    width: 28px;
+    height: 21px;
 }
