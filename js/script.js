@@ -8,8 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let timer;
 
     function showImage(index, direction) {
-        sliderImage.style.animation = 'fadeIn 1s forwards';
-        sliderImage.src = images[index];
+        sliderImage.style.animation = 'fadeOut 1s forwards';
+    
+        setTimeout(function () {
+            sliderImage.style.animation = 'fadeIn 1s forwards';
+            sliderImage.src = images[index];
+        }, 700);
     }
 
     function showNextImage() {
@@ -20,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function autoChangeImage() {
         timer = setTimeout(function () {
+            sliderImage.style.animation = 'fadeOut 1s forwards';
             showNextImage();
         }, 4000);
     }
@@ -30,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     prevBtn.addEventListener('click', function () {
+
         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
         showImage(currentImageIndex, 'prev');
         restartTimer();
