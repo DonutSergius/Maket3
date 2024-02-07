@@ -27,6 +27,10 @@
     letter-spacing: 0px;
 }
 
+.leftblock a:hover{
+    text-decoration: underline;
+}
+
 .leftblock li{
     font-size: 14px;
     line-height: 22px;
@@ -152,11 +156,11 @@ li b{
 
     .leftblock{
         width: 150px;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 20px;
     }
     .leftblock li{
-        font-size: 10px;
+        font-size: 12px;
         line-height: 18px;
     }
     .leftblock img{
@@ -169,20 +173,41 @@ li b{
 
 @media(max-width: 750px){
 
-    .card-box{
-        margin-left: 0;
+    .card-content{
+        margin: 0 10%;
+        justify-content: center;
+    }
+
+    .card-box {
+        width: 180px;
+        height: 280px;
+    }
+
+    .card-box p{
+        font-size: 12px;
+    }
+
+    .card-box img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .card-price {
+        font-size: 18px;
+        width: 140px;
+        bottom: 20;
+    }
+
+    .card-price img{
+        width: 28px;
+        height: 21px;
     }
 
     .container-content, .url-text{
         width: 460px;
     }
     .centerblock{
-        width: 400px;
-    }
-
-    .card-content{
-        margin: 0 10%;
-        justify-content: center;
+        width: 250px;
     }
 
     .underText{
@@ -191,7 +216,7 @@ li b{
 
     .leftText, .rightText {
         width: 100%;
-        padding: 20px 0px
+        padding: 10px 0px
     }
 }
 
