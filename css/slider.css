@@ -38,3 +38,43 @@
         opacity: 1;
     }
 }
+
+@media(max-width: 989px){
+    .slider-image {
+        width: 100%;
+    }
+
+    .slider-menu{
+        width: 80%;
+        bottom: 40%;
+        height: auto;
+    }
+
+    .slider-menu img{
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px){
+    .slider-menu{
+        width: 90%;
+        bottom: 30%;
+    }
+
+    .slider-menu img{
+        height: 80%;
+        width:80%;
+    }
+}
+
+@media(max-width: 415px){
+    .slider-menu{
+        bottom:10%;
+    }
+
+    .slider-menu img{
+        height: 60%;
+        width: 60%;
+    }
+}
