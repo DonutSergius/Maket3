@@ -58,6 +58,7 @@ li b{
 
 .centerblock{
     flex: 1;
+    width: 800px;
 }
 
 .card-content{
@@ -135,7 +136,7 @@ li b{
 @media(max-width: 999px){
     .url-text{
         width: 750px;
-        font-size: 10px;
+        font-size: 12px;
     }
     .container-content{
         width: 750px;
