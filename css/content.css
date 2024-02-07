@@ -1,7 +1,7 @@
 .url-text{
     margin: 0 auto;
-    width: 990px;
-    padding: 10px;
+    width: 1000px;
+    padding: 0px 10px 10px 10px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
     color: #767676;
@@ -10,7 +10,7 @@
 
 .container-content{
     margin: 0 auto;
-    width: 990px;
+    width: 1000px;
     padding: 10px;
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
@@ -19,7 +19,7 @@
     display: flex;
 }
 
-.left-content{
+.leftblock{
     width: 200px;
 
     font-size: 18px;
@@ -27,7 +27,7 @@
     letter-spacing: 0px;
 }
 
-.left-content li{
+.leftblock li{
     font-size: 14px;
     line-height: 22px;
     padding-left: 10px;
@@ -38,13 +38,13 @@ li b{
     color: black;
 }
 
-.left-content img{
+.leftblock img{
     display: block;
     margin: 0 auto;
     padding-top: 50px;
 }
 
-.left-content h3{
+.leftblock h3{
     color: #444444;
     font-size: 30px;
     line-height: 25px;
@@ -52,24 +52,26 @@ li b{
     text-align: center;
 }
 
-.right-content{
-    width: 795px;
+.centerblock{
+    flex: 1;
 }
 
 .card-content{
     position: relative;
+    z-index: 10;
     display: flex;
     flex-wrap: wrap;
 }
 
 .card-box{
+    z-index: 11;
     box-sizing: border-box;
     position: relative;
     width: 250px;
     height: 380px;
     background-color: #dcdcdc;
     padding: 20px 20px 20px 20px;
-    margin: 0px 0px 10px 8px;
+    margin: 0px 8.3px 10px 0px;
 }
 
 .card-box img{
@@ -83,6 +85,7 @@ li b{
 }
 
 .card-price {
+    z-index: 12;
     position: absolute;
     bottom: 20px;
     font-size: 28px;
@@ -95,4 +98,153 @@ li b{
 .card-price img{
     width: 28px;
     height: 21px;
+}
+
+.page-list {
+    font-size: 14px;
+    letter-spacing: 8px;
+    line-height: 22px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.underText{
+    display: flex;
+}
+
+.leftText{
+    width: 50%;
+    left: 0%;
+    text-align: left;
+    padding: 20px 20px 20px 0px;
+}
+
+.rightText{
+    position: relative;
+    width: 50%;
+    text-align: left;
+    padding: 20px 0px 20px 20px;
+    margin-left: auto;
+}
+
+@media(max-width: 999px){
+    .url-text{
+        width: 750px;
+        font-size: 10px;
+    }
+    .container-content{
+        width: 750px;
+        font-size: 12px;
+    }
+
+    .centerblock{
+        width: 600px;
+    }
+
+    .card-content{
+        justify-content: space-between;
+    }
+    .card-box{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .leftblock{
+        width: 150px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .leftblock li{
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .leftblock img{
+        width: 70px;
+    }
+    .leftblock h3{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 750px){
+
+    .card-box{
+        margin-left: 0;
+    }
+
+    .container-content, .url-text{
+        width: 460px;
+    }
+    .centerblock{
+        width: 400px;
+    }
+
+    .card-content{
+        margin: 0 10%;
+        justify-content: center;
+    }
+
+    .underText{
+        display: contents;
+    }
+
+    .leftText, .rightText {
+        width: 100%;
+        padding: 20px 0px
+    }
+}
+
+@media(max-width: 480px){
+    .container-content, .url-text{
+        width: 300px;
+    }
+    .leftblock{
+        width:100px;
+    }
+
+    .leftblock img{
+        width: 40px
+    }
+
+    .leftblock h3{
+        font-size: 16px;
+    }
+
+    .centerblock{
+        width: 180px;
+    }
+
+    .card-content{
+        margin: 0;
+    }
+
+    .card-box {
+        width: 180px;
+        height: 280px;
+    }
+
+    .card-box p{
+        font-size: 12px;
+    }
+
+    .card-box img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .card-price {
+        font-size: 18px;
+        width: 140px;
+        bottom: 20;
+    }
+
+    .card-price img{
+        width: 28px;
+        height: 21px;
+    }
+
+    .page-list{
+        letter-spacing: 2px;
+    }
 }

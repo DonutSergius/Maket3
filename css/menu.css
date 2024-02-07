@@ -9,7 +9,7 @@
 }
 
 .menu {
-    width: 990px;
+    width: 1000px;
     padding: 10px;
     margin: 0 auto;
     display: flex;
@@ -28,7 +28,7 @@
     text-decoration: underline;
 }
 
-@media(max-width: 989px){
+@media(max-width: 999px){
     .container-menu{
         font-size: 18px;
         letter-spacing: 0px;
@@ -86,10 +86,11 @@
         height: 26px;
       
         cursor: pointer;
-        z-index: 1;
+        z-index: 200000000000000000000000000000;
       }
 
       .back-menu {
+        z-index: 1000;
         top: 0;
         left:0;
         position: fixed;
