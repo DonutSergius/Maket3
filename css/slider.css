@@ -30,9 +30,19 @@
     border: none;
 }
 
+.preview-img img,
+.next-img img {
+    opacity: 0.8;
+}
+
+.preview-img img:hover,
+.next-img img:hover{
+    opacity: 1;
+}
+
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0.15;
     }
     to {
         opacity: 1;

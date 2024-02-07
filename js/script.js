@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let timer;
 
     function showImage(index, direction) {
-        sliderImage.style.animation = 'fadeIn 0.5s forwards';
+        sliderImage.style.animation = 'fadeIn 1s forwards';
         sliderImage.src = images[index];
     }
 
