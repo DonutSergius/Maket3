@@ -101,6 +101,8 @@
     border: 1px solid #ff8383;
 }
 
+
+
 @media(max-height: 700px){
     .feedback{
         width: 366px;

@@ -65,7 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var feedbackSend = document.querySelector(".feedback-send");
 
   feedbackButton.addEventListener("click", function () {
-    feedbackContant.classList.add("fullscreen");
+    setTimeout(function () {
+        feedbackContant.style.animation = 'fadeIn 0.4s forwards';
+        feedbackContant.classList.add("fullscreen");
+    }, 100);
   });
 
   feedbackEnd.addEventListener("click", function () {
