@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/null.css" >
-    <link rel="stylesheet" href="css/style.css" >
-    <link rel="stylesheet" href="css/menu.css" >
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/content.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap" rel="stylesheet">     <title>NameCompany</title>
-</head>
-<body>
-<!-- ================ HEADER ================== -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/null.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>NameCompany</title>
+  </head>
+  <body>
+    <!-- ================ HEADER ================== -->
     <header>
-        <div class="container">
-            <div class="left-container">
-                <div class="logo">
-                    <a href=""><img src="img/logo.png" alt="logo_company"></a>
-                </div>
-                <div class="company">
-                    <div class="company-top">
-                        <h1>Name of company</h1>
-                    </div>
-                    <div class="company-down">
-                        the best company
-                    </div>
-                </div>
+      <div class="container">
+        <div class="left-container">
+          <div class="logo">
+            <a href=""><img src="img/logo.png" alt="logo_company" /></a>
+          </div>
+          <div class="company">
+            <div class="company-top">
+              <h1>Name of company</h1>
             </div>
-            <div class="right-container">
-                <div class="phone">
-                    <a href="tel: +380977777777">
-                        <p>+38(097) 777-77-77</p>
-                    </a>
-                    <a href="tel: +380977777777">
-                        <p>+38(097) 777-77-77</p>
-                    </a>
-                </div>
-                <div class="back">
-                    <a href=""><p>Return phone</p></a>
-                </div>
-            </div>
+            <div class="company-down">the best company</div>
+          </div>
         </div>
+        <div class="right-container">
+          <div class="phone">
+            <a href="tel: +380977777777">
+              <p>+38(097) 777-77-77</p>
+            </a>
+            <a href="tel: +380977777777">
+              <p>+38(097) 777-77-77</p>
+            </a>
+          </div>
+          <div class="back">
+            <button id="back-phone"><p>Return phone</p></button>
+          </div>
+        </div>
+      </div>
     </header>
-<!-- ======================================== -->
+    <!-- ======================================== -->
 
-<!-- ================ MENU ================== -->
+    <!-- ================ MENU ================== -->
     <div class="container-menu">
-        <div class="menu">
-            <a href="#">Home</a>
-            <div>|</div>
-            <a href="#">Catalog</a>
-            <div>|</div>
-            <a href="#">Delivery and payment</a>
-            <div>|</div>
-            <a href="#">Price List</a>
-            <div>|</div>
-            <a href="#">Contacts</a>
-        </div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <div>|</div>
+        <a href="#">Catalog</a>
+        <div>|</div>
+        <a href="#">Delivery and payment</a>
+        <div>|</div>
+        <a href="#">Price List</a>
+        <div>|</div>
+        <a href="#">Contacts</a>
+      </div>
     </div>
-        <div class="hamburger-menu">
-            <div class="back-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                  <span></span>
-                </label>
-            
-        
-            <ul class="menu__box">
-              <li><a class="menu__item" href="#">Home</a></li>
-                    <li><a class="menu__item" href="#">Catalog</a></li>
-                    <li><a class="menu__item" href="#">Delivery and payment</a></li>
-                    <li><a class="menu__item" href="#">Price List</a></li>
-                    <li><a class="menu__item" href="#">Contacts</a></li>
-            </ul>
-        </div>
-    </div>
-<!-- ========================================== -->
+    <div class="hamburger-menu">
+      <div class="back-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
 
-<!-- ================ SLIDER ================== -->
-<div class="container-slider">
-    <img src="img/slide1.jpg" alt="slide1" class="slider-image">
-    
-    <div class="slider-menu">
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">Home</a></li>
+          <li><a class="menu__item" href="#">Catalog</a></li>
+          <li><a class="menu__item" href="#">Delivery and payment</a></li>
+          <li><a class="menu__item" href="#">Price List</a></li>
+          <li><a class="menu__item" href="#">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ========================================== -->
+
+    <!-- ================ SLIDER ================== -->
+    <div class="container-slider">
+      <img src="img/slide1.jpg" alt="slide1" class="slider-image" />
+
+      <div class="slider-menu">
         <div class="preview-img">
-            <button id="prevBtn">
-                <img src="img/left.jpg" alt="left">
-            </button>
+          <button id="prevBtn">
+            <img src="img/left.jpg" alt="left" />
+          </button>
         </div>
         <div class="next-img">
-            <button id="nextBtn">
-                <img src="img/right.jpg" alt="right">
-            </button>
+          <button id="nextBtn">
+            <img src="img/right.jpg" alt="right" />
+          </button>
         </div>
+      </div>
     </div>
-</div>
-<!-- ============================================== -->
+    <!-- ============================================== -->
 
-<!-- =================== CONTENT ===================-->
-<div class="url-text">
-    <u>Home</u> / <u>Catalog</u> / Household appliances
-</div>
-<div class="container-content">
-    <div class="leftblock">
+    <!-- =================== CONTENT ===================-->
+    <div class="url-text">
+      <u>Home</u> / <u>Catalog</u> / Household appliances
+    </div>
+    <div class="container-content">
+      <div class="leftblock">
         <p><a href="#">Cars</a></p>
         <p><a href="#">Household appliances</a></p>
-        <li><b><a href="#">Microwave</a></u></li>
+        <li>
+          <b><a href="#">Microwave</a></b>
+        </li>
         <li><a href="#">Freezer</a></li>
         <li><a href="#">Dishwashers</a></li>
         <li><a href="#">Teapots</a></li>
@@ -113,86 +117,125 @@
         <p><a href="#">Clothes</a></p>
         <p><a href="#">Realty</a></p>
 
-        
         <a href="">
-            <img src="img/logo_price-list.jpg" alt="price-list">
-            <h3>Price-List</h3>
+          <img src="img/logo_price-list.jpg" alt="price-list" />
+          <h3>Price-List</h3>
         </a>
-    </div>
+      </div>
 
-    <div class="centerblock">
-            <!-- CARDS -->
+      <div class="centerblock">
+        <!-- CARDS -->
         <div class="card-content">
-            <a href="">
-                <div class="card-box">
-                    <img src="img/nophoto.jpg" alt="nophoto">
-                    <p>The best Teapots in the world</p>
-                    <div class="card-price">
-                        1000$
-                       <a href=""><img src="img/icon_buy.svg" alt="buy"></a>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="card-box">
-                    <img src="img/nophoto.jpg" alt="nophoto">
-                    <p>The best Teapots in the world</p>
-                    <div class="card-price">
-                        1000$
-                       <a href=""><img src="img/icon_buy.svg" alt="buy"></a>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="card-box">
-                    <img src="img/nophoto.jpg" alt="nophoto">
-                    <p>The best Teapots in the world</p>
-                    <div class="card-price">
-                        1000$
-                       <a href=""><img src="img/icon_buy.svg" alt="buy"></a>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="card-box">
-                    <img src="img/nophoto.jpg" alt="nophoto">
-                    <p>The best Teapots in the world</p>
-                    <div class="card-price">
-                        1000$
-                       <a href=""><img src="img/icon_buy.svg" alt="buy"></a>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="card-box">
-                    <img src="img/nophoto.jpg" alt="nophoto">
-                    <p>The best Teapots in the world</p>
-                    <div class="card-price">
-                        1000$
-                       <a href=""><img src="img/icon_buy.svg" alt="buy"></a>
-                    </div>
-                </div>
-            </a>
+          <a href="">
+            <div class="card-box">
+              <img src="img/nophoto.jpg" alt="nophoto" />
+              <p>The best Teapots in the world</p>
+              <div class="card-price">
+                1000$
+                <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card-box">
+              <img src="img/nophoto.jpg" alt="nophoto" />
+              <p>The best Teapots in the world</p>
+              <div class="card-price">
+                1000$
+                <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card-box">
+              <img src="img/nophoto.jpg" alt="nophoto" />
+              <p>The best Teapots in the world</p>
+              <div class="card-price">
+                1000$
+                <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card-box">
+              <img src="img/nophoto.jpg" alt="nophoto" />
+              <p>The best Teapots in the world</p>
+              <div class="card-price">
+                1000$
+                <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card-box">
+              <img src="img/nophoto.jpg" alt="nophoto" />
+              <p>The best Teapots in the world</p>
+              <div class="card-price">
+                1000$
+                <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
+              </div>
+            </div>
+          </a>
         </div>
-        
-            <!-- END CARDS -->
-        <div class="page-list">
-            1 2 <b>3</b> 4 5 6 7
-        </div>
-        <hr>
+
+        <!-- END CARDS -->
+        <div class="page-list">1 2 <b>3</b> 4 5 6 7</div>
+        <hr />
         <div class="underText">
-            <div class="leftText">
-                The Pixel Plus company has existed for more than 6 years, during which time we have taken part in the development of more than 700 websites, so we can confidently call ourselves professionals. At the moment, our team consists of more than 30 employees working in two offices in Moscow and Zelenograd. The motives characteristic of this genre: unrequited love, the passing of youth, the fading of the soul.
-            </div>
-            <div class="rightText">
-                One of the main areas of work of our company is search engine promotion of websites; at the moment we work with more than 150 regular clients on more than 11,000 search queries. At the same time, in our work we place the main emphasis on the quality of work, and also use our own unique developments in the field of SEO promotion. At the moment, the SEO department consists of 9 people under the leadership of a leading specialist, mainly working in our Moscow office.
-            </div>
+          <div class="leftText">
+            The Pixel Plus company has existed for more than 6 years, during
+            which time we have taken part in the development of more than 700
+            websites, so we can confidently call ourselves professionals. At the
+            moment, our team consists of more than 30 employees working in two
+            offices in Moscow and Zelenograd. The motives characteristic of this
+            genre: unrequited love, the passing of youth, the fading of the
+            soul.
+          </div>
+          <div class="rightText">
+            One of the main areas of work of our company is search engine
+            promotion of websites; at the moment we work with more than 150
+            regular clients on more than 11,000 search queries. At the same
+            time, in our work we place the main emphasis on the quality of work,
+            and also use our own unique developments in the field of SEO
+            promotion. At the moment, the SEO department consists of 9 people
+            under the leadership of a leading specialist, mainly working in our
+            Moscow office.
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- ============================================== -->
+    <!-- ============================================== -->
 
+    <!--============== FOOTER =================-->
 
-</body>
-<script src="js/script.js"></script>
+    <footer>
+      <div class="footer-content">
+        <div class="f-email">
+          <a href="">
+            <p>© 2012–2013 CJSC "Company"</p>
+            <p>info@name.uk</p>
+          </a>
+        </div>
+        <div class="f-catalog">
+          <p><a href="#">Home</a></p>
+          <p><a href="#">Catalog</a></p>
+          <p><a href="#">Delivery and payment</a></p>
+          <p><a href="#">Price List</a></p>
+          <p><a href="#">Contacts</a></p>
+        </div>
+        <div class="f-company">
+          <a href="#">
+            <img src="img/logo_companydev.svg" alt="logo_companydev" />
+            <div class="f-c-text">
+              <p>Website development —</p>
+              <p>"Pixel Plus" company</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!--=======================================-->
+  </body>
+  <script src="js/script.js"></script>
 </html>

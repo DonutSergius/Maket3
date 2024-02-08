@@ -44,12 +44,18 @@
 }
 
 .back p{
+    color: #767676;
     text-decoration: dashed underline;
     font-size: 24px;
     letter-spacing: 1px;
     line-height: 30px;
     font-weight: 700;
     font-family: 'PT Sans', sans-serif;
+}
+
+.back button{
+    background-color: transparent;
+    border: none;
 }
 
 @media(max-width: 999px){
