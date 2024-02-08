@@ -1,0 +1,126 @@
+.feedback-contant {
+    background-color: rgba(0, 0, 0, 0.502);
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback {
+    background-color: #ffffff;
+    opacity: 1;
+    color: #535353;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    width: 466px;
+    height: 578px;
+    text-align: center;
+    position: relative;
+}
+
+.feedback h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.feedback label {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feedback input{
+    width: 339px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border: 1px solid #c3c3c3;
+}
+
+.feedback textarea{
+    padding: 0px 10px;
+    resize: none;
+    width: 339px;
+    height: 140px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+}
+
+.feedback button {
+    background-color: #777777;
+    color: white;
+    border: none;
+    width: 128px;
+    height: 42px;
+}
+
+.feedback-contant.fullscreen {
+    display: contents;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.feedback-end {
+    position: absolute;
+    top: -27px;
+    right: -27px;
+}
+
+.feedback-end img{
+    margin-top: 5px;
+    width: 17px;
+    height: 17px;
+}
+
+.feedback-end button{
+    width: 27px;
+    height: 27px;
+    background-color: #777777;
+    border: 0;
+}
+
+.feedback-end button:hover{
+    background-color: red;
+}
+
+.feedback .error {
+    box-shadow: inset 0 0 6.5px rgba(228,106,106,0.75);
+    background-color: #ffffff;
+    border: 1px solid #ff8383;
+}
+
+@media(max-height: 700px){
+    .feedback{
+        width: 366px;
+        height: 480px;
+    }
+
+    .feedback input{
+        height: 30px;
+        width: 100%;
+    }
+
+    .feedback textarea{
+        width: 100%;
+        height: 90px;
+    }
+}
+
+@media(max-width: 600px){
+    .feedback{
+        width:250px;
+
+    }
+}

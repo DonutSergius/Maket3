@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/slider.css" />
     <link rel="stylesheet" href="css/content.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/feedback.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap"
       rel="stylesheet"
@@ -40,7 +41,7 @@
             </a>
           </div>
           <div class="back">
-            <button id="back-phone"><p>Return phone</p></button>
+            <button class="feedback-button"><p>Return phone</p></button>
           </div>
         </div>
       </div>
@@ -206,15 +207,40 @@
     </div>
     <!-- ============================================== -->
 
+    <!-- ================= FEEDBACK ===================== -->
+    <div class="feedback-contant">
+      <div class="feedback">
+        <div class="feedback-end">
+          <button>
+            <img src="img/icon_close.svg" alt="icon_close" />
+          </button>
+        </div>
+        <h3>Feedback</h3>
+        <label for="name">Your name*</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button class="feedback-send">Send</button>
+      </div>
+    </div>
+
+    <!-- ============================================== -->
+
     <!--============== FOOTER =================-->
 
     <footer>
       <div class="footer-content">
         <div class="f-email">
-          <a href="mailto:info@name.uk">
-            <p>© 2012–2013 CJSC "Company"</p>
-            <p>info@name.uk</p>
-          </a>
+          <a href="#"><p>© 2012–2013 CJSC "Company"</p></a>
+          <a href="mailto:info@name.uk"> <p>info@name.uk</p> </a>
         </div>
         <div class="f-catalog">
           <p><a href="#">Home</a></p>
@@ -238,4 +264,5 @@
     <!--=======================================-->
   </body>
   <script src="js/script.js"></script>
+  <script></script>
 </html>

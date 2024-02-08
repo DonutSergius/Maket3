@@ -86,7 +86,7 @@
         height: 26px;
       
         cursor: pointer;
-        z-index: 200000000000000000000000000000;
+        z-index: 2000;
       }
 
       .back-menu {
