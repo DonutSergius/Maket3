@@ -45,3 +45,30 @@ footer {
     height: 200px;
     margin-top: auto;
 }
+
+@media(max-width: 999px){
+    .footer-content{
+        width: 800px
+    }
+}
+
+@media(max-width: 600px){
+    footer{
+        height: max-content;
+    }
+
+    .footer-content{
+        padding: 40px 0px;
+        display: block;
+        width: 250px;
+    }
+
+    .f-company{
+        height: 80px;
+        padding-bottom: 50px;
+    }
+
+    .f-email, .f-catalog{
+        padding: 10px;
+    }
+}
