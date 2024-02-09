@@ -32,12 +32,35 @@
     text-decoration: underline;
 }
 
-.leftblock li{
-    font-size: 14px;
+.leftblock ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .leftblock li {
     line-height: 22px;
+  }
+
+  .leftblock ul ul {
+    list-style:inside;
+    display: none;
+    font-size: 14px;
     padding-left: 10px;
+  }
+  
+  .leftblock li:hover >a{
+    text-decoration: underline;
+  }
+
+  .leftblock li:hover > ul {
+    display: block;
+  }
+  
+  .leftblock li ul li {
+    padding-left: 0;
     list-style-position: inside;
-}
+  }
 
 li b{
     color: black;
@@ -58,7 +81,7 @@ li b{
 }
 
 .centerblock{
-    flex: 1;
+    margin-left: auto;
     width: 800px;
 }
 

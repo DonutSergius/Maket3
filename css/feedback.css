@@ -101,8 +101,6 @@
     border: 1px solid #ff8383;
 }
 
-
-
 @media(max-height: 700px){
     .feedback{
         width: 366px;
@@ -122,7 +120,57 @@
 
 @media(max-width: 600px){
     .feedback{
-        width:250px;
+        width:400px;
+    }
 
+    .feedback input{
+        width: 100%;
+    }
+
+    .feedback textarea{
+        width: 100%;
+    }
+
+    .feedback-end{
+        right: 0px;
+        top: 0px;
+    }
+}
+
+@media(max-width: 500px){
+    .feedback{
+        width:300px;
+    }
+
+    .feedback input{
+        width: 100%;
+    }
+
+    .feedback textarea{
+        width: 100%;
+    }
+
+    .feedback-end{
+        right: 0px;
+        top: 0px;
+    }
+}
+
+@media(max-width: 400px){
+    .feedback{
+        width:250px;
+    }
+
+    .feedback input{
+        width: 100%;
+    }
+
+    .feedback textarea{
+        width: 100%;
+    }
+
+    .feedback-end{
+        right: 0px;
+        top: 0px;
     }
 }

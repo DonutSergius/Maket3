@@ -13,15 +13,20 @@
     padding: 10px;
     margin: 0 auto;
     display: flex;
+    list-style: none; 
 }
 .menu div {
     flex-grow: 1;
 }
 
+.menu li {
+  flex-grow: 1;
+  text-align: center;
+}
+
 .menu a {
     text-decoration: none;
     color: #ffffff;
-    flex-grow: 1;
 }
 
 .menu a:hover {
