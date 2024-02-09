@@ -58,6 +58,10 @@
     border: none;
 }
 
+.feedback-button p:hover{
+    color: black;
+}
+
 @media(max-width: 999px){
     .container{
         width: 70%;

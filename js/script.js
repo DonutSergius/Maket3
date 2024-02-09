@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 var nameInput = document.getElementById("name");
 var phoneInput = document.getElementById("phone");
 var emailInput = document.getElementById("email");
+var textInput = document.getElementById("message");
 document.addEventListener("DOMContentLoaded", function () {
   var feedbackContant = document.querySelector(".feedback-contant");
   var feedbackButton = document.querySelector(".feedback-button");
@@ -75,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ClearField(nameInput);
     ClearField(phoneInput);
     ClearField(emailInput);
+    ClearField(textInput);
     feedbackContant.classList.remove("fullscreen");
   });
 
@@ -84,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ClearField(nameInput);
       ClearField(phoneInput);
       ClearField(emailInput);
+      ClearField(textInput);
     }
   });
 
@@ -98,12 +101,17 @@ document.addEventListener("DOMContentLoaded", function () {
   emailInput.addEventListener("focus", function () {
     removeError(emailInput);
   });
+
+  textInput.addEventListener("focus", function () {
+    removeError(textInput);
+  });
 });
 
 function validateForm() {
   isNameValid = validateInput(nameInput);
   isPhoneValid = validateInput(phoneInput);
   isEmailValid = validateInput(emailInput);
+  isTextValid = validateInput(textInput);
 
   return isNameValid && isPhoneValid && isEmailValid;
 }
@@ -124,7 +132,7 @@ function validateInput(inputElement) {
     isValid = false;
   }
 
-  if (value === "" || value === "This field is required.") {
+  if (value === "") {
     inputElement.value = "This field is required.";
     isValid = false;
   }
@@ -139,8 +147,13 @@ function validateInput(inputElement) {
 }
 
 function removeError(inputElement) {
-  inputElement.classList.remove("error");
-  inputElement.style.color = "";
+  if (inputElement.classList.contains("error")) 
+  {
+    inputElement.classList.remove("error");
+    inputElement.style.color = "";
+    if(inputElement.value === "This field is required.")
+    inputElement.value = "";
+  }
 }
 
 function ClearField(inputElement){
