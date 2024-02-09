@@ -110,25 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
 function validateForm() {
   isNameValid = validateInput(nameInput);
   isPhoneValid = validateInput(phoneInput);
-  isEmailValid = validateInput(emailInput);
+  isEmailValid = validateInput(emailInput)
   isTextValid = validateInput(textInput);
 
-  return isNameValid && isPhoneValid && isEmailValid;
+  return isNameValid && isPhoneValid && isEmailValid && isTextValid;
 }
 
 function validateInput(inputElement) {
   var value = inputElement.value.trim();
-  var isValid = true;
+  isValid = true;
 
-  if(inputElement.id === "name" && /\d/.test(value)){
-    isValid = false;
-  }
-
-  if(inputElement.id === "phone" && !/^\+?\d{12}$/.test(value)){
-    isValid = false;
-  }
-
-  if(inputElement.id === "email" && !/^\S+@\S+\.\S+$/.test(value)){
+  if(!inputElement.checkValidity()){
     isValid = false;
   }
 
