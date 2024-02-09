@@ -72,29 +72,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   feedbackEnd.addEventListener("click", function () {
-    nameInput.value = "";
-    phoneInput.value = "";
-    emailInput.value = "";
-    if (nameInput.classList.contains("error")) {
-      nameInput.classList.remove("error");
-      nameInput.style.color = "";
-    }
-
-    if (phoneInput.classList.contains("error")) {
-      phoneInput.classList.remove("error");
-      phoneInput.style.color = "";
-    }
-
-    if (emailInput.classList.contains("error")) {
-      emailInput.classList.remove("error");
-      emailInput.style.color = "";
-    }
+    ClearField(nameInput);
+    ClearField(phoneInput);
+    ClearField(emailInput);
     feedbackContant.classList.remove("fullscreen");
   });
 
   feedbackSend.addEventListener("click", function () {
     if (validateForm()) {
       feedbackContant.classList.remove("fullscreen");
+      ClearField(nameInput);
+      ClearField(phoneInput);
+      ClearField(emailInput);
     }
   });
 
@@ -110,31 +99,54 @@ document.addEventListener("DOMContentLoaded", function () {
     removeError(emailInput);
   });
 });
+
 function validateForm() {
-  var isNameValid = validateInput(nameInput);
-  var isPhoneValid = validateInput(phoneInput);
-  var isEmailValid = validateInput(emailInput);
+  isNameValid = validateInput(nameInput);
+  isPhoneValid = validateInput(phoneInput);
+  isEmailValid = validateInput(emailInput);
 
   return isNameValid && isPhoneValid && isEmailValid;
 }
 
 function validateInput(inputElement) {
   var value = inputElement.value.trim();
+  var isValid = true;
+
+  if(inputElement.id === "name" && /\d/.test(value)){
+    isValid = false;
+  }
+
+  if(inputElement.id === "phone" && !/^\+?\d{12}$/.test(value)){
+    isValid = false;
+  }
+
+  if(inputElement.id === "email" && !/^\S+@\S+\.\S+$/.test(value)){
+    isValid = false;
+  }
 
   if (value === "" || value === "This field is required.") {
+    inputElement.value = "This field is required.";
+    isValid = false;
+  }
+
+  if(!isValid){
     inputElement.classList.add("error");
     inputElement.style.color = "red";
-    inputElement.value = "This field is required.";
     return false;
-  } else {
-    inputElement.classList.remove("error");
-    inputElement.style.color = "";
-
-    return true;
   }
+  
+  return true;
 }
 
 function removeError(inputElement) {
   inputElement.classList.remove("error");
   inputElement.style.color = "";
+}
+
+function ClearField(inputElement){
+  inputElement.value = "";
+  if (inputElement.classList.contains("error")) {
+    inputElement.classList.remove("error");
+    inputElement.style.color = "";
+  }
 }

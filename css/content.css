@@ -158,6 +158,7 @@ li b{
 }
 
 @media(max-width: 999px){
+
     .url-text{
         width: 750px;
         font-size: 12px;
@@ -185,6 +186,10 @@ li b{
         font-size: 15px;
         line-height: 20px;
     }
+    .leftblock ul ul{
+        display: block;
+    }
+
     .leftblock li{
         font-size: 12px;
         line-height: 18px;
