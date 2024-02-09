@@ -64,3 +64,10 @@ textarea {
 }
 
 /* Ваші додаткові стилі можуть йти нижче */
+input:focus {
+    outline: none;
+}
+
+textarea{
+    outline: none;
+}
