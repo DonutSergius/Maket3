@@ -122,6 +122,15 @@ function validateInput(inputElement) {
 
   if(!inputElement.checkValidity()){
     isValid = false;
+    if (inputElement.id === "name") {
+      inputElement.setCustomValidity("Invalid name");
+    }
+    if (inputElement.type === "tel") {
+      inputElement.setCustomValidity("Invalid phone number");
+    }
+    if (inputElement.type === "email") {
+      inputElement.setCustomValidity("Invalid email address");
+    }
   }
 
   if (value === "") {
@@ -142,6 +151,7 @@ function removeError(inputElement) {
   if (inputElement.classList.contains("error")) 
   {
     inputElement.classList.remove("error");
+    inputElement.setCustomValidity("");
     inputElement.style.color = "";
     if(inputElement.value === "This field is required.")
     inputElement.value = "";
@@ -151,6 +161,7 @@ function removeError(inputElement) {
 function ClearField(inputElement){
   inputElement.value = "";
   if (inputElement.classList.contains("error")) {
+    inputElement.setCustomValidity("");
     inputElement.classList.remove("error");
     inputElement.style.color = "";
   }
