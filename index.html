@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/null.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/slider.css" />
-    <link rel="stylesheet" href="css/content.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/feedback.css" />
+
+    <!--Slick Slider-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans&display=swap"
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <link rel="stylesheet" href="css/null.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
     <title>NameCompany</title>
@@ -82,7 +90,15 @@
 
     <!-- ================ SLIDER ================== -->
     <div class="container-slider">
-      <img src="img/slide1.jpg" alt="slide1" class="slider-image" />
+      <div class="slider-elem">
+        <div class="elem">
+          <img src="img/slide1.jpg" alt="slide1" class="slider-image" />
+        </div>
+
+        <div class="elem">
+          <img src="img/slide2.jpg" alt="slide" class="slider-image" />
+        </div>
+      </div>
 
       <div class="slider-menu">
         <div class="preview-img">
@@ -136,7 +152,7 @@
               <img src="img/nophoto.jpg" alt="nophoto" />
               <p>The best Teapots in the world</p>
               <div class="card-price">
-                1000$
+                <b>1000$</b>
                 <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
               </div>
             </div>
@@ -146,7 +162,7 @@
               <img src="img/nophoto.jpg" alt="nophoto" />
               <p>The best Teapots in the world</p>
               <div class="card-price">
-                1000$
+                <b>1000$</b>
                 <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
               </div>
             </div>
@@ -156,7 +172,7 @@
               <img src="img/nophoto.jpg" alt="nophoto" />
               <p>The best Teapots in the world</p>
               <div class="card-price">
-                1000$
+                <b>1000$</b>
                 <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
               </div>
             </div>
@@ -166,7 +182,7 @@
               <img src="img/nophoto.jpg" alt="nophoto" />
               <p>The best Teapots in the world</p>
               <div class="card-price">
-                1000$
+                <b>1000$</b>
                 <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
               </div>
             </div>
@@ -176,7 +192,7 @@
               <img src="img/nophoto.jpg" alt="nophoto" />
               <p>The best Teapots in the world</p>
               <div class="card-price">
-                1000$
+                <b>1000$</b>
                 <a href=""><img src="img/icon_buy.svg" alt="buy" /></a>
               </div>
             </div>
@@ -229,7 +245,7 @@
         <label for="email">Email*</label>
         <input type="email" id="email" name="email" />
 
-        <label for="message">Message</label>
+        <label for="message">Message*</label>
         <textarea id="message" name="message"></textarea>
 
         <button class="feedback-send">Send</button>
@@ -267,5 +283,38 @@
 
     <!--=======================================-->
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var $Slider = $(".slider-elem");
+
+        $Slider.slick({
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          speed: 1500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          fade: true,
+          cssEase: "linear",
+        });
+        var $prevBtn = $("#prevBtn");
+        var $nextBtn = $("#nextBtn");
+
+        $prevBtn.on("click", function () {
+          $Slider.slick("slickPrev");
+        });
+
+        $nextBtn.on("click", function () {
+          $Slider.slick("slickNext");
+        });
+      });
+    </script>
   </body>
 </html>
